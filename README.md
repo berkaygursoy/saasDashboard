@@ -59,67 +59,104 @@ npm run build
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-SaaS Dashboard Project
+# SaaS Dashboard
 
 ![React](https://img.shields.io/badge/React-18.2.0-blue)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3.3-blueviolet)
-![Supabase](https://img.shields.io/badge/Supabase-2.53.0-3ECF8E)
-![Stripe](https://img.shields.io/badge/Stripe-7.14.0-008CDD)
+![Stripe API](https://img.shields.io/badge/Stripe_API-7.14.0-008CDD)
 
-A subscription management panel and user dashboard for a modern SaaS application.
+A modern SaaS dashboard built with React, featuring user authentication, subscription management, and Stripe integration.
 
-Features
-✅ User authentication (Supabase Auth)
+## Features
+- 🔐 User authentication system
+- 💳 Subscription management dashboard
+- 💰 Stripe API integration for payments
+- 🌓 Theme support (Light/Dark mode)
+- 📱 Responsive design for all devices
 
-💳 Subscription management with Stripe integration
+## Tech Stack
+- **Frontend**: React 18.2.0, Vite, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Database**: Supabase
+- **Payments**: Stripe API
+- **Authentication**: Supabase Auth
+- **Development Tools**: ESLint, PostCSS
 
-🌙 Light/Dark theme support
+## Installation
 
-📱 Responsive design
-
-📊 User-friendly dashboard interface
-
-Setup
-Clone the repository:
-
-bash
-Kopyala
-Düzenle
-git clone https://github.com/your_username/saas_dashboard.git
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username/saas_dashboard.git
 cd saas_dashboard
-Install required dependencies:
+```
 
-bash
-Kopyala
-Düzenle
+2. Install dependencies:
+```bash
 npm install
-Set environment variables:
+```
 
-env
-Kopyala
-Düzenle
+## Configuration
+
+1. Create a `.env` file in the root directory:
+```env
 VITE_SUPABASE_URL=your_supabase_url
 VITE_SUPABASE_KEY=your_supabase_key
-STRIPE_PUBLISHABLE_KEY=your_stripe_key
-STRIPE_SECRET_KEY=your_stripe_secret
-Usage
-Run in development mode:
+STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
+STRIPE_SECRET_KEY=your_stripe_secret_key
+```
 
-bash
-Kopyala
-Düzenle
-npm run dev
-Production build:
+2. Replace the placeholder values with your actual credentials:
+   - **Supabase**: Create a new project and get your URL and anon key
+   - **Stripe**: Create an account and get your publishable and secret keys
 
-bash
-Kopyala
-Düzenle
+## Usage
+
+### Development
+To run the application in development mode with both frontend and backend:
+```bash
+npm run dev:all
+```
+
+This will start:
+- Frontend development server at `http://localhost:5173`
+- Backend server at `http://localhost:3001`
+
+### Production
+1. Build the frontend:
+```bash
 npm run build
-Technology Stack
-Frontend: React 18, Vite, TailwindCSS
+```
 
-Backend: Supabase (Auth, Database)
+2. Start the production server:
+```bash
+npm run server
+```
 
-Payment System: Stripe API
+## Project Structure
+```
+saas_dashboard/
+├── src/                 # React source code
+│   ├── components/      # Reusable components
+│   ├── pages/          # Page components
+│   ├── hooks/          # Custom React hooks
+│   ├── services/       # API services
+│   └── utils/          # Utility functions
+├── public/             # Static assets
+├── supabase/           # Database migrations
+├── server.js           # Express server
+└── package.json        # Project dependencies
+```
 
-State Management: React Context API
+## Key Components
+- **Authentication**: Login, registration, and password reset
+- **Dashboard**: User profile and subscription overview
+- **Billing**: Payment methods and subscription management
+- **Settings**: Account preferences and theme customization
+
+## Environment Variables
+| Variable | Description |
+|----------|-------------|
+| `VITE_SUPABASE_URL` | Your Supabase project URL |
+| `VITE_SUPABASE_KEY` | Your Supabase anon key |
+| `STRIPE_PUBLISHABLE_KEY` | Stripe publishable key |
+| `STRIPE_SECRET_KEY` | Stripe secret key |
