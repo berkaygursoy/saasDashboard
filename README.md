@@ -63,6 +63,7 @@ npm run build
 
 ![React](https://img.shields.io/badge/React-18.2.0-blue)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3.3-blueviolet)
+![Supabase](https://img.shields.io/badge/Supabase-2.53.0-3ECF8E)
 ![Stripe API](https://img.shields.io/badge/Stripe_API-7.14.0-008CDD)
 
 A modern SaaS dashboard built with React, featuring user authentication, subscription management, and Stripe integration.
